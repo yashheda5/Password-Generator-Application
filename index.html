@@ -6,20 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML & Tailwind CSS Starter Pack</title>
-
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-    <main class="flex justify-center gap-4 flex-col min-h-screen">
-        <h1 class="text-3xl text-center font-bold underline">
-            HTML & Tailwind CSS Starter Pack
-        </h1>
-        <p class="text-center text-xl">
-            This is a starter pack for HTML & Tailwind CSS projects.
-        </p>
-        <img src="https://bit.ly/3wsmzTy" alt="meme" class="mx-auto">
-    </main>
+    <div class="container">
+
+
+
+        <h1>Password Generator </h1>
+
+
+        <div class="display-container">
+            <input readonly placeholder="password" class="display" data-passwordDisplay>
+            <button class="btn">
+                <img src="./images/copy.svg" alt="copy">
+            </button>
+            <span data-copyMsg></span>
+        </div>
+
+
+
+        <div class="input-container">
+            <!-- password length section -->
+            <div class="length-container">
+                <p>Password Lenght </p>
+                <p data-lengthNumber>0</p>
+            </div>
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" name="" id="" data-lengthSlider>
+            <!-- checkboxes -->
+            <div>
+                <input type="checkbox" name="" id="uppercase">
+                <label for="uppercase">include uppercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="lowercase">
+                <label for="lowercase">include lowercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="numbers">
+                <label for="numbers">include numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="" id="symbols">
+                <label for="symbols">include symbols </label>
+            </div>
+
+            <!-- strength section -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div data-strength-indicator></div>
+            </div>
+            <!-- Generate password -->
+            <button class="generateButton">Generate password</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
